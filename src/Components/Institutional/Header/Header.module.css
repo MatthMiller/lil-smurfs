@@ -1,0 +1,269 @@
+.header {
+    padding: 21px 0px;
+    box-shadow: 0px 2px 3px 0px rgba(14, 7, 0, 0.15);
+
+    /* Pra acompanhar o scroll */
+    z-index: 7;
+    /* background-color: #0A0511;
+    position: fixed;
+    top: 0;
+    width: 100% */
+}
+
+/* .stickyCompensation { */
+    /* margin-bottom: 90px; */
+/* } */
+
+/* 😛😛😛😛😛😛😛
+
+Deixar o header sticky somente no mobile
+aí fica o menu mobile e o carrinho no header.
+
+Pra desktop tem q colocar um icon de carrinho no canto da tela.
+
+*/
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    color: #F6F2FF;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.middle {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.dropDownContainer,
+.link {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: #A098B1;
+    font-weight: 400;
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    line-height: 1;
+    position: relative;
+    
+    transition: 150ms;
+    padding: 10px 0px;
+}
+
+.dropDownLink {
+    display: flex;
+    gap: 2px;
+    color: #A098B1;
+    font-weight: 400;
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    line-height: 1;
+    padding-right: 48px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    transition: 150ms;
+}
+
+.dropDownContainer {
+    user-select: none;
+    position: relative;
+}
+
+.dropDownContainer::after,
+.link::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    background-color: #754CCD;
+    transition: 200ms;
+    bottom: calc(0px + 10px - 4px);
+}
+
+.dropDownContainer.active,
+.link.active {
+    color: #F6F2FF;
+}
+
+
+.dropDownContainer.active::after,
+.link.active::after {
+    width: 80%;
+}
+
+.dropDownContainer svg path {
+    transition: 150ms;
+}
+
+.dropDownContent {
+    position: absolute;
+
+    /* content padding-top-bottom - font-size - contas padding-top-bottom - flex gap - compensação */
+    bottom: calc(-24px - 16px - 12px - 6px - 16px);
+    
+    left: -8px;
+
+    display: none;
+    height: max-content;
+    width: max-content;
+    z-index: 5;
+
+    background-color: #150F21;
+    border: 1px solid #1F1630;
+    padding: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 7px;
+    box-shadow: 0px 2px 3px 0px rgba(14, 7, 0, 0.15);
+}
+
+.dropDownLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dropDownContainer:hover .dropDownContent {
+    display: block;
+}
+
+@media (pointer: fine) {
+    .dropDownLink:hover,
+    .dropDownContainer:hover,
+    .link:hover {
+        color: #F6F2FF;
+    }
+
+    .dropDownContainer:hover svg path {
+        fill: #F6F2FF;
+    }
+
+    .link:hover::after {
+        width: 80%;
+    }
+}
+
+@media (pointer: coarse) {
+    .dropDownLink:active,
+    .dropDownContainer:hover,
+    .link:active {
+        color: #F6F2FF;
+    }
+
+    .dropDownContainer:hover svg path {
+        fill: #F6F2FF;
+    }
+
+    .link:active::after {
+        width: 80%;
+    }
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.cartSide {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.cartIconContainer {
+    border-radius: 7px;
+    padding: 6px;
+    border: 1px solid #754CCD;
+    display: flex;
+    cursor: pointer;
+
+    transition: 150ms;
+}
+
+@media (pointer: fine) {
+    .cartIconContainer:hover {
+        background-color: #754CCD;
+    }
+
+    .menuButton:hover,
+    .userAreaButton:hover {
+        background-color: #563799;
+    }
+}
+
+@media (pointer: coarse) {
+    .cartIconContainer:active {
+        background-color: #754CCD;
+    }
+
+    .menuButton:active,
+    .userAreaButton:active {
+        background-color: #563799;
+    }
+}
+
+.price {
+    color: #F6F2FF;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1;
+    font-family: 'Archivo', sans-serif;
+}
+
+.priceDecimal {
+    font-weight: 300;
+}
+
+.userAreaButton {
+    padding: 16px 24px;
+    background-color: #754CCD;
+    font-family: 'Ubuntu';
+    color: #F6F2FF;
+    line-height: 1;
+    font-size: 1rem;
+    border-radius: 7px;
+    font-weight: 500;
+    transition: 150ms;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.menuButton {
+    border-radius: 5px;
+    padding: 7px;
+    background-color: #754CCD;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    display: none;
+    transition: 150ms;
+}
+
+@media (max-width: 960px) {
+    .middle,
+    .userAreaButton {
+        display: none;
+    }
+
+    .menuButton {
+        display: flex;
+    }
+
+    .right {
+        gap: 16px;
+    }
+
+    .cartSide {
+        gap: 8px;
+    }
+}

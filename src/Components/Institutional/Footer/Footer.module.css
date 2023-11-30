@@ -1,0 +1,61 @@
+.footer {
+    background-color: #0A0511;
+}
+
+.wrapper {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    max-width: 670px;
+    margin: 0 auto;
+}
+
+.logoContainer {
+    margin: 0 auto;
+    max-width: max-content;
+    margin-bottom: 24px;
+}
+
+.iconList {
+    margin: 0 auto;
+    max-width: max-content;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.iconContainer {
+    height: 38px;
+    width: 38px;
+    border: 1px solid #754CCD;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    border-radius: 7px;
+
+    transition: 150ms;
+}
+
+.iconContainer li {
+    display: flex;
+}
+
+@media (pointer: fine) {
+    .iconContainer:hover {
+        background-color: #754CCD;
+    }
+}
+
+@media (pointer: coarse) {
+    .iconContainer:active {
+        background-color: #754CCD;
+    }
+}
+
+.copytext {
+    color: #A098B1;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
