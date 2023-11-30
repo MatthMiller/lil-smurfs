@@ -105,6 +105,12 @@ a {
   max-width: 1300px;
 }
 
+.g-header-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+}
+
 .g-container {
   margin: 0 auto;
   margin-left: 70px;

@@ -5,13 +5,11 @@ import CartIcon from '../../../Images/Common/Icons/CartIcon';
 
 const Header = () => {
   const [menuMobile, setMenuMobile] = React.useState(false);
-  // FAZER OUTRO COMPONENTE PRO HEADER MOBILE
-  // DPS COLOCAR ELE AQ PRA SER ATIVADO OU DESATIVADO
 
   return (
     <>
       <header className={style.header}>
-        <div className='g-wrapper'>
+        <div className='g-header-wrapper'>
           <div className={style.container + ' g-container'}>
             <Link to='/' className={style.logoContainer}>
               <h1>LOGO</h1>
