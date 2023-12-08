@@ -4,7 +4,7 @@ import Footer from '../Components/Institutional/Footer/Footer';
 import Cart from '../Components/Institutional/Cart/Cart';
 
 const InstitutionalLayout = ({ children }) => {
-  const [isCartOpen, setIsCartOpen] = React.useState(true);
+  const [isCartOpen, setIsCartOpen] = React.useState(false);
 
   return (
     <>
