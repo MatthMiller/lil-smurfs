@@ -23,7 +23,7 @@ const Faq = () => {
                 <FaqItem
                   icon={<GarantiaIcon />}
                   title='Qual é a garantia de vocês?'
-                  description='Nós levamos extremamente a sério todas as medidas de segurança para evitar banimentos (e quando digo extremamente, é REALMENTE sério!). Contudo, mesmo com nossos esforços, ainda existe uma taxa mínima de 0,01% de banimentos (aproximadamente 1 em cada 1000 contas) ou em situações de BanWaves. É importante frisar que comprar contas vai contra os termos da Riot Games e, como resultado, você corre o risco de receber suspensões e/ou banimentos, especialmente durante as primeiras partidas, quando o histórico coop (contra bots) ainda está visível no perfil. Ressaltamos que não realizamos reposição de bans e/ou suspensões. Aproveite o jogo, mas sempre respeite as regras para uma experiência justa e divertida para todos.'
+                  description='Nós levamos extremamente a sério todas as medidas de segurança para evitar banimentos. Contudo, mesmo com nossos esforços, ainda existe uma taxa mínima de 0,01% de banimentos (aproximadamente 1 em cada 1000 contas) ou em situações de BanWaves. É importante frisar que comprar contas vai contra os termos da Riot Games e, como resultado, você corre o risco de receber suspensões e/ou banimentos, especialmente durante as primeiras partidas, quando o histórico coop (contra bots) ainda está visível no perfil.'
                 />
                 <FaqItem
                   icon={<HorarioFuncionamentoIcon />}

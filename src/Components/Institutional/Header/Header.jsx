@@ -3,7 +3,7 @@ import style from './Header.module.css';
 import { Link, NavLink } from 'react-router-dom';
 import CartIcon from '../../../Images/Common/Icons/CartIcon';
 
-const Header = () => {
+const Header = ({ setIsCartOpen }) => {
   const [menuMobile, setMenuMobile] = React.useState(false);
 
   return (
@@ -66,7 +66,10 @@ const Header = () => {
                 <p className={style.price}>
                   R$ 18<span className={style.priceDecimal}>,00</span>
                 </p>
-                <div className={style.cartIconContainer}>
+                <div
+                  onClick={() => setIsCartOpen(true)}
+                  className={style.cartIconContainer}
+                >
                   <CartIcon />
                 </div>
               </div>

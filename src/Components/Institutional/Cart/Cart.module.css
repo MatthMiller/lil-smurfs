@@ -1,0 +1,105 @@
+.modalBackground {
+    width: 100%;
+    height: 100vh;
+    /* background: rgba(2, 0, 7, 0.70); */
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 10;
+
+    display: grid;
+    justify-content: end;
+    pointer-events: none;
+}
+
+.modal {
+    width: 350px;
+    background-color: #150F21;
+    box-shadow: 0px 2px 4px 0px rgba(2, 0, 7, 0.20);
+    padding: 24px 16px;
+    border-left: 1px solid #1F1630;
+
+    pointer-events: all;
+
+    /* Animação */
+    opacity: 0;
+    transform: translateX(50px);
+
+    animation: 350ms entryFromRight forwards;
+}
+
+@keyframes entryFromRight {
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.modal.closing {
+    animation: 350ms exitToRight forwards;
+}
+
+@keyframes exitToRight {
+    from {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+.modalTop {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.modalTitle {
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 500;
+    color: #FFB743;
+    font-style: italic;
+}
+
+.modalSubtitle {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #A098B1;
+    margin-top: 8px;
+}
+
+.closeContainer {
+    padding: 7px;
+    border-radius: 7px;
+    display: flex;
+    height: max-content;
+    transition: 150ms;
+    cursor: pointer;
+}
+
+.closeContainer svg path {
+    transition: 150ms;
+}
+
+@media (pointer: fine) {
+    .closeContainer:hover {
+        background-color: #231A35;
+    }
+
+    .closeContainer:hover svg path {
+        fill: #F6F2FF;
+    }
+}
+
+@media (pointer: coarse) {
+    .closeContainer:active {
+        background-color: #231A35;
+    }
+
+    .closeContainer:active svg path {
+        fill: #F6F2FF;
+    }
+}
