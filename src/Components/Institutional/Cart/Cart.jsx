@@ -15,9 +15,15 @@ const Cart = ({ setIsCartOpen }) => {
     }, 350);
   };
 
+  const handleTryToCloseOnMobile = ({ target }) => {
+    if (target.classList.contains(style.modalBackground)) {
+      handleCloseCart();
+    }
+  };
+
   return (
     <>
-      <div className={style.modalBackground}>
+      <div onClick={handleTryToCloseOnMobile} className={style.modalBackground}>
         <div ref={modalRef} className={style.modal}>
           <div className={style.modalTop}>
             <div>

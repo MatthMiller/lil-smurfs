@@ -11,6 +11,13 @@
     pointer-events: none;
 }
 
+@media (max-width: 960px) {
+    .modalBackground {
+        pointer-events: unset;
+        background: rgba(2, 0, 7, 0.70);
+    }
+}
+
 .modal {
     width: 350px;
     background-color: #150F21;
