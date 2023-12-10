@@ -1,0 +1,102 @@
+.rouletteWrapper {
+    box-shadow: 0px 2px 3px 0px rgba(14, 7, 0, 0.25) !important;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.portalDecoratorLeft,
+.portalDecoratorRight {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 8;
+    height: 100%;
+    width: 90px;
+    background: linear-gradient(270deg, #0A0511 0%, rgba(10, 5, 17, 0.89) 47.27%, rgba(10, 5, 17, 0.00) 92.62%);
+}
+
+.portalDecoratorLeft { left: 0; transform: scale(-1, -1); }
+
+.portalDecoratorRight { right: 0; }
+
+@media (max-width: 750px) {
+    .portalDecoratorLeft, .portalDecoratorRight {
+        width: 40px;
+    }
+}
+
+.sortearButtonContainer {
+    display: flex;
+    place-content: center;
+}
+
+.sortearButton {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1rem;
+    line-height: 1;
+    border: 1px solid #754CCD;
+    color: #F6F2FF;
+    padding: 11px 22px;
+    font-weight: 500;
+    max-width: max-content;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 150ms;
+}
+
+.sortearButton svg {
+    transition: 150ms;
+}
+
+.sortearButton.disabledButton {
+    opacity: 40%;
+    cursor: auto;
+}
+
+@media (pointer: fine) {
+    .sortearButton:hover {
+        background-color: #754CCD;
+    }
+
+    .sortearButton:hover svg {
+        transform: translateX(6px);
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+}
+
+@media (pointer: coarse) {
+    .sortearButton:active {
+        background-color: #754CCD;
+    }
+
+    .sortearButton:active svg {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-2px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(2px, 0, 0);
+    }
+}

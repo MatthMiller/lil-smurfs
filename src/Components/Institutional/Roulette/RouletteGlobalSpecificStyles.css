@@ -1,0 +1,27 @@
+/* Stick/Ponteiro do meio */
+.roulette-pro-regular-design-top {
+    background: #754CCD  linear-gradient(0deg, #461E9B, #754CCD) !important;
+    background: #754CCD  linear-gradient(0deg, #BA7309, #FFAA20) !important;
+}
+
+/* wrapper da img */
+.roulette-pro-regular-image-wrapper {
+    display: flex !important;
+    margin: 0 auto !important;
+    place-content: center !important;
+    object-fit: cover !important;
+    object-position: center;
+}
+
+/* card */
+.roulette-pro-regular-prize-item-wrapper {
+    border-color: #1F1630 !important;
+    background: #150F21 !important;
+}
+
+/* img */
+.roulette-pro-regular-image-wrapper img {
+    max-height: 140px;
+    object-fit: cover;
+    place-self: center;
+}

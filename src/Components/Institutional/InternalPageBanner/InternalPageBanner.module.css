@@ -1,0 +1,57 @@
+.geralWrapper {
+    position: relative;
+    background-color: #150F21;
+    margin-bottom: 96px;
+}
+
+.titleContainer {
+    padding: 51px 10px;
+}
+
+.title {
+    font-style: italic;
+    color: #FFB743;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.375rem;
+    line-height: 2.375rem;
+    position: relative;
+    z-index: 4;
+}
+
+.whiteTitle {
+    color: #F6F2FF;
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+}
+
+.bgShadow {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 0, 7, 0.75);
+}
+
+@media (max-width: 1100px) {
+    .titleContainer {
+        padding: 48px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .title {
+        font-size: 2rem;
+        line-height: 2.1875rem;
+    }
+}
