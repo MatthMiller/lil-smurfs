@@ -44,6 +44,7 @@
     max-width: max-content;
     border-radius: 7px;
     cursor: pointer;
+    user-select: none;
     transition: 150ms;
 }
 
