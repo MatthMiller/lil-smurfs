@@ -1,0 +1,21 @@
+.container {
+    margin-top: 20px;
+    margin-bottom: 48px;
+}
+
+.title {
+    font-size: 2rem;
+    line-height: 2.1875rem;
+    color: #FFB743;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #A098B1;
+    font-weight: 400;
+    font-family: 'Ubuntu';
+}

@@ -55,10 +55,6 @@ img {
   max-height: 100%;
 }
 
-/* button:focus {
-  visibility: hidden;
-} */
-
 button,
 input {
   display: block;

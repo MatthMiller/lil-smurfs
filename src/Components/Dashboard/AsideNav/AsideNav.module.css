@@ -1,0 +1,180 @@
+.asideContainer {
+    /* 100svh - paddings do wrapper */
+    height: calc(100svh - 32px);
+    /* background-color: red; */
+    display: flex;
+}
+
+.aside {
+    padding: 22px 14px;
+    border: 2px solid #1F1630;
+    border-radius: 10px;
+    background-color: #150F21;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #F6F2FF;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.divisor {
+    height: 1px;
+    width: 100%;
+    background-color: #1F1630;
+    margin: 36px 0px;
+}
+
+.labelTitle {
+    font-size: .875rem;
+    line-height: 1;
+    font-weight: 600;
+    color: #A098B1;
+    letter-spacing: 0.28px;
+    margin-bottom: 6px;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.4375rem;
+    color: #F6F2FF;
+    margin-bottom: 24px;
+}
+
+.pages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pageButton {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    
+    color: #F6F2FF;
+    font-size: 1rem;
+    line-height: 1;
+    font-family: 'Ubuntu';
+    min-width: 250px;
+
+    padding: 11px;
+    background-color: #150F21;
+    border: 1px solid #574B70;
+    border-radius: 7px;
+}
+
+.pageButton, .pageButton svg path {
+    transition: 150ms;
+}
+
+.pageButton.active {
+    background-color: #754CCD;
+}
+
+.pageButton.active svg path {
+    fill: #F6F2FF;
+}
+
+.backToStoreButton {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    place-content: center;
+    font-family: 'Ubuntu';
+    padding: 15px 0px;
+    font-size: 1rem;
+    line-height: 1;
+    border: 1px solid #754CCD;
+    background-color: transparent;
+    color: #F6F2FF;
+    border-radius: 7px;
+    transition: 150ms;
+}
+
+@media (pointer: fine) {
+    .backToStoreButton:hover {
+        background-color: #754CCD;
+    }
+
+    .pageButton:hover {
+        border-color: #754CCD;
+    }
+
+    .pageButton:hover svg path {
+        fill: #F6F2FF;
+    }
+}
+
+@media (pointer: coarse) {
+    .backToStoreButton:active {
+        background-color: #754CCD;
+    }
+
+    .pageButton:active {
+        border-color: #754CCD;
+    }
+
+    .pageButton:active svg path {
+        fill: #F6F2FF;
+    }
+}
+
+@media (max-width: 1300px) {
+    .pageButton {
+        min-width: 235px;
+    }
+}
+
+.mobileHeader {
+    display: none;
+    justify-content: space-between;
+    background-color: #150F21;
+    padding: 21px 0px;
+    box-shadow: 0px 2px 3px 0px rgba(14, 7, 0, 0.15);
+    z-index: 7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* faz igual o header mobile do institucional */
+}
+
+.stickyCompensation { display: none; }
+
+.menuButton {
+    border-radius: 5px;
+    padding: 7px;
+    background-color: #754CCD;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+    cursor: pointer;
+    transition: 150ms;
+}
+
+@media (max-width: 960px) {
+    .asideContainer {
+        display: none;
+    }
+    
+    .logo {
+        margin-top: 0;
+    }
+
+    .mobileHeader {
+        display: flex;
+    }
+
+    .stickyCompensation {
+        display: block;
+        margin-bottom: 80px;
+    }
+}

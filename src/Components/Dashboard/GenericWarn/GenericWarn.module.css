@@ -1,0 +1,25 @@
+.warn {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 15px;
+    background-color: #150F21;
+    border: 1px solid #1F1630;
+    border-radius: 10px;
+}
+
+.icon {
+    display: flex;
+    place-self: start;
+    max-height: max-content;
+}
+
+.message {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #F6F2FF;
+    font-weight: 400;
+    font-family: 'Ubuntu';
+    margin-top: 4px;
+}

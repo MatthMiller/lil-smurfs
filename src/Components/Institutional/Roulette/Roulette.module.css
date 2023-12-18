@@ -106,7 +106,7 @@
 .ticketsWrapper {
     display: flex;
     margin-bottom: 32px;
-    place-content: end;
+    place-content: flex-end;
 }
 
 /* .ticketsWrapper svg {

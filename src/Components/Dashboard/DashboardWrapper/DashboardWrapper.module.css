@@ -1,0 +1,14 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 16px;
+    column-gap: 32px;
+    padding-right: 32px;
+}
+
+@media (max-width: 960px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        padding-right: 16px;
+    }
+}
