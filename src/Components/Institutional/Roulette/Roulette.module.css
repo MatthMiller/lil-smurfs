@@ -10,7 +10,7 @@
     display: block;
     position: absolute;
     top: 0;
-    z-index: 8;
+    z-index: 5;
     height: 100%;
     width: 90px;
     background: linear-gradient(270deg, #0A0511 0%, rgba(10, 5, 17, 0.89) 47.27%, rgba(10, 5, 17, 0.00) 92.62%);
@@ -29,6 +29,7 @@
 .sortearButtonContainer {
     display: flex;
     place-content: center;
+    margin-bottom: 150px;
 }
 
 .sortearButton {
@@ -100,4 +101,125 @@
     40%, 60% {
       transform: translate3d(2px, 0, 0);
     }
+}
+
+.ticketsWrapper {
+    display: flex;
+    margin-bottom: 32px;
+    place-content: end;
+}
+
+/* .ticketsWrapper svg {
+    display: flex;
+    align-items: center;
+} */
+
+.ticketsLeft {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    padding-right: 40px;
+    border: 1px solid #754CCD;
+    border-right: none;
+    border-radius: 7px 0px 0px 7px;
+}
+
+.ticketsText {
+    color: #F6F2FF;
+    font-size: 1.125rem;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.ticketsText span {
+    font-weight: 500;
+}
+
+.addToCart {
+    display: flex;
+    place-items: center;
+    background-color: #FFB743;
+    border-radius: 0px 7px 7px 0px;
+    cursor: pointer;
+    padding: 0px 9px;
+    transition: 150ms;
+}
+
+@media (pointer: fine) {
+    .addToCart:hover {
+        background-color: #D9962B;
+    }
+}
+
+@media (pointer: coarse) {
+    .addToCart:active {
+        background-color: #D9962B;
+    }
+}
+
+.title {
+    color: #FFB743;
+    font-size: 2rem;
+    line-height: 2.1875rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.title span {
+    color: #F6F2FF;
+}
+
+.chanceList {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 4px 0px rgba(2, 0, 7, 0.20);
+    margin-bottom: 150px;
+}
+
+.chanceItem {
+    padding: 14px 24px;
+    background-color: #150F21;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.chanceItem:first-child {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.chanceItem:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.chanceItem:nth-child(2n) {
+    background-color: #0A0511;
+}
+
+.chance {
+    font-weight: 300;
+    color: #F6F2FF;
+    font-size: 1.3125rem;
+    padding: 7px 7px;
+    border-radius: 4px;
+    border: 1px solid #754CCD;
+    user-select: none;
+}
+
+.chanceText {
+    /* font-size: 1.3125rem; */
+    /* line-height: 1.5rem; */
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #F6F2FF;
+    font-weight: 500;
+}
+
+.chanceText span {
+    color: #A098B1;
+    font-weight: 400;
+    font-family: 'Ubuntu';
 }

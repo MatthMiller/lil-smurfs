@@ -16,7 +16,7 @@
 /* card */
 .roulette-pro-regular-prize-item-wrapper {
     border-color: #1F1630 !important;
-    background: #150F21 !important;
+    background: #130D1E !important;
 }
 
 /* img */
@@ -24,4 +24,5 @@
     max-height: 140px;
     object-fit: cover;
     place-self: center;
+    user-select: none;
 }

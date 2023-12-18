@@ -54,4 +54,8 @@
         font-size: 2rem;
         line-height: 2.1875rem;
     }
+
+    .geralWrapper {
+        margin-bottom: 48px;
+    }
 }
