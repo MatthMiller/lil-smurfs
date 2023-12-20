@@ -98,6 +98,10 @@
 }
 
 @media (pointer: fine) {
+    .menuButton:hover {
+        background-color: #563799;
+    }
+
     .backToStoreButton:hover {
         background-color: #754CCD;
     }
@@ -112,6 +116,10 @@
 }
 
 @media (pointer: coarse) {
+    .menuButton:active {
+        background-color: #563799;
+    }
+
     .backToStoreButton:active {
         background-color: #754CCD;
     }
@@ -133,7 +141,8 @@
 
 .mobileHeader {
     display: none;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    flex-direction: column;
     background-color: #150F21;
     padding: 21px 0px;
     box-shadow: 0px 2px 3px 0px rgba(14, 7, 0, 0.15);
@@ -144,14 +153,30 @@
     width: 100%;
     padding-left: 16px;
     padding-right: 16px;
+    height: 100svh;
+    max-height: 80px;
+    transition: all 0.3s;
     /* faz igual o header mobile do institucional */
+}
+
+.mobileHeaderTop {
+    display: flex;
+    justify-content: space-between;
 }
 
 .stickyCompensation { display: none; }
 
+.mobileHeader.activeMenu {
+    max-height: 100svh;
+    transition: max-height 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
 .menuButton {
     border-radius: 5px;
     padding: 7px;
+    /* place-self: start; */
     background-color: #754CCD;
     align-items: center;
     gap: 8px;
@@ -159,6 +184,8 @@
     cursor: pointer;
     transition: 150ms;
 }
+
+.menuButton svg path { fill: #F6F2FF; }
 
 @media (max-width: 960px) {
     .asideContainer {
@@ -176,5 +203,33 @@
     .stickyCompensation {
         display: block;
         margin-bottom: 80px;
+    }
+
+    .divisor {
+        margin: 32px 0px;
+    }
+}
+
+.mobileContentContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.entryOpacity {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    animation: entryOpacity 400ms both;
+}
+
+@keyframes entryOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

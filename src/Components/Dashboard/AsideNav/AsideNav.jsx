@@ -1,21 +1,85 @@
 import React from 'react';
 import style from './AsideNav.module.css';
 import { Link, NavLink } from 'react-router-dom';
+import CloseIcon from '../../../Images/Common/Icons/CloseIcon';
 
 const AsideNav = () => {
-  // if props 'user' carregar o componente com a navegação pra user
-  // e seus componentes
-  // if props 'admin' carregar o componente com a navegação pra user
-  // e seus componentes
+  // if props 'user' carregar a navegação pra admin
+  // e seus componentes/links/icons
+  // if props 'admin' carregar a navegação pra admin
+  // e seus componentes/links/icons
+
+  const [menuMobile, setMenuMobile] = React.useState(false);
 
   return (
     <>
       <div className={style.stickyCompensation}></div>
-      <header className={style.mobileHeader}>
-        <h1 className={style.logo}>LOGO</h1>
-        <div className={style.menuButton}>
-          <MenuButtonIcon />
+      <header
+        className={
+          menuMobile
+            ? `${style.mobileHeader} ${style.activeMenu}`
+            : style.mobileHeader
+        }
+      >
+        <div className={style.mobileHeaderTop}>
+          <h1 className={style.logo}>LOGO</h1>
+          <div
+            onClick={() => setMenuMobile(!menuMobile)}
+            className={style.menuButton}
+          >
+            {menuMobile ? <CloseIcon /> : <MenuButtonIcon />}
+          </div>
         </div>
+
+        {menuMobile ? (
+          <div className={style.entryOpacity}>
+            <div className={style.divisor}></div>
+            <h4 className={style.labelTitle}>ÁREA DO USUÁRIO</h4>
+            <h3 className={style.title}>Painel de controle</h3>
+
+            <div className={style.mobileContentContainer}>
+              <nav className={style.pages}>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${style.pageButton} ${style.active}`
+                      : style.pageButton
+                  }
+                  to={'/dashboard-user/meus-pedidos'}
+                >
+                  <PedidosIcon />
+                  <p>Meus pedidos</p>
+                </NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${style.pageButton} ${style.active}`
+                      : style.pageButton
+                  }
+                  to={'/dashboard-user/roleta'}
+                >
+                  <PremiosIcon />
+                  <p>Prêmios</p>
+                </NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${style.pageButton} ${style.active}`
+                      : style.pageButton
+                  }
+                  to={'/dashboard-user/meu-perfil'}
+                >
+                  <MeuPerfilIcon />
+                  <p>Meu perfil</p>
+                </NavLink>
+              </nav>
+
+              <Link to='/' className={style.backToStoreButton}>
+                Voltar à loja
+              </Link>
+            </div>
+          </div>
+        ) : null}
       </header>
 
       <div className={style.asideContainer}>
