@@ -76,6 +76,10 @@
     .passwordContainer:hover .passwordIconContainer {
         opacity: 1;
     }
+
+    .forgotPassword:hover {
+        color: #D1BAFF;
+    }
 }
 
 @media (pointer: coarse) {
@@ -83,4 +87,124 @@
         fill: #DAD2EC;
     }
 
+    .forgotPassword:active {
+        color: #D1BAFF;
+    }
+}
+
+.buttonCheckboxContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.buttonCheckbox {
+    height: 18px;
+    width: 18px;
+    background-color: #0E0815;
+    border-radius: 5px;
+    border: 1px solid #1F1630;
+    transition: 150ms;
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
+.buttonCheckbox::after {
+    content: '';
+    display: block;
+    transition: 150ms;
+    opacity: 0;
+    border-radius: 3px;
+    height: 10px;
+    background-color: #754CCD;
+    width: 10px;
+}
+
+.buttonCheckboxContainer.buttonChecked .buttonCheckbox::after {
+    opacity: 1;
+}
+
+.checkboxText {
+    font-size: 1rem;
+    line-height: 1;
+    font-family: 'Ubuntu';
+    color: #E3DCF1;
+    user-select: none;
+}
+
+.forgotPassword {
+    color: #8E65DF;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 400;
+    text-decoration: underline;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Ubuntu';
+    transition: 150ms;
+}
+
+.ghostButton,
+.filledButton {
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 500;
+    border: 2px solid #754CCD;
+    color: #F6F2FF;
+    padding: 12px 22px;
+    width: 100%;
+    text-align: center;
+    border-radius: 7px;
+    
+    transition: 150ms;
+}
+
+.filledButton {
+    background-color: #754CCD;
+}
+
+@media (pointer: fine) {
+    .filledButton:hover {
+        background-color: #563799;
+        border-color: #563799;
+    }
+
+    .ghostButton:hover {
+        background-color: #754CCD;
+    }
+}
+
+@media (pointer: coarse) {
+    .filledButton:active {
+        background-color: #563799;
+        border-color: #563799;
+    }
+
+    .ghostButton:active {
+        background-color: #754CCD;
+    }
+}
+
+.divisorContainer {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 18px;
+}
+
+.hintText {
+    font-size: 1rem;
+    line-height: 1;
+    font-family: 'Ubuntu';
+    color: #F6F2FF;
+    width: 100%;
+    align-items: center;
+}
+
+.divisorLine {
+    height: 2px;
+    width: 100%;
+    background-color: #1F1630;
 }

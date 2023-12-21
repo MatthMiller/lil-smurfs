@@ -41,9 +41,41 @@
     width: 385px;
     padding: 24px 16px;
 
+    margin-bottom: 20px;
     height: 100%;
 }
 
 .inputContainer:first-child {
     margin-bottom: 24px;
+}
+
+.inputContainer:nth-child(2) {
+    margin-bottom: 12px;
+}
+
+.loginBottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    gap: 16px;
+}
+
+@media (max-height: 665px) {
+    .title {
+        margin-top: 40px;
+    }
+
+    .login {
+        margin-bottom: 40px;
+    }
+
+    .bg {
+        height: max-content;
+    }
+}
+
+@media (max-width: 435px) {
+    .login {
+        width: 100%;
+    }
 }
