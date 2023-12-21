@@ -8,7 +8,6 @@ const AsideNav = () => {
   // e seus componentes/links/icons
   // if props 'admin' carregar a navegação pra admin
   // e seus componentes/links/icons
-
   const [menuMobile, setMenuMobile] = React.useState(false);
 
   return (

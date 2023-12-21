@@ -3,10 +3,10 @@ import style from './Cart.module.css';
 import CloseIcon from '../../../Images/Common/Icons/CloseIcon';
 
 const Cart = ({ setIsCartOpen }) => {
-  const modalRef = React.useRef();
+  // Como passar dados entre páginas (query params)
+  // https://medium.com/@codingscenes/react-router-to-pass-data-between-pages-6ee22fdf2dfa
 
-  // No mobile, por max-width, o carrinho ocupa uma qntd de 'fr'
-  // e o modal cria uma área escura na parte de fora
+  const modalRef = React.useRef();
 
   const handleCloseCart = () => {
     modalRef.current.classList.add(style.closing);

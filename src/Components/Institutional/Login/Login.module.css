@@ -1,0 +1,49 @@
+.bg {
+    height: 100svh;
+    background-repeat: repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    place-content: center;
+    min-height: 100svh;
+    /* background-color: purple; */
+}
+
+.title, .subtitle {
+    text-align: center;
+}
+
+.title {
+    color: #F6F2FF;
+    font-size: 2rem;
+    line-height: 2.1875rem;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.subtitle {
+    font-size: 1.3125rem;
+    font-weight: 400;
+    color: #A098B1;
+    margin-bottom: 24px;
+    line-height: 1.4375rem;
+}
+
+.login {
+    border-radius: 10px;
+    border: 1px solid #1F1630;
+    background: #150F21;
+    box-shadow: 0px 2px 4px 0px rgba(2, 0, 7, 0.20);
+    place-self: center;
+    width: 385px;
+    padding: 24px 16px;
+
+    height: 100%;
+}
+
+.inputContainer:first-child {
+    margin-bottom: 24px;
+}
