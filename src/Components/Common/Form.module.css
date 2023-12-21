@@ -141,6 +141,7 @@
     font-weight: 400;
     text-decoration: underline;
     display: inline-block;
+    max-width: max-content;
     cursor: pointer;
     font-family: 'Ubuntu';
     transition: 150ms;
