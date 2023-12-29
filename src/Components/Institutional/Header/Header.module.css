@@ -32,7 +32,8 @@ Pra desktop tem q colocar um icon de carrinho no canto da tela.
 }
 
 .logoContainer .text {
-    padding-top: 4px;
+    margin-top: 4px;
+    height: 32px;
 }
 
 .container {
