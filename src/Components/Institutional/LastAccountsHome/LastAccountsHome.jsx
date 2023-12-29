@@ -16,8 +16,14 @@ const LastAccountsHome = () => {
             </p>
           </div>
 
-          <div className={style.cardsContainer}>
-            <AccountCard />
+          <div className={style.shadowContainer}>
+            <div className={style.cardsContainer}>
+              <AccountCard />
+              <AccountCard />
+              <AccountCard />
+              <AccountCard />
+            </div>
+            <div className={style.portalShadow}></div>
           </div>
         </div>
       </section>

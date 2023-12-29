@@ -1,7 +1,8 @@
 import React from 'react';
 import style from './AccountCard.module.css';
 import EAImage from '../../../Images/Common/Accounts/ea.png';
-import mockupImage from '../../../Images/Common/Accounts/bee-maw-splash-vertical.jpg';
+import mockupVerticalImage from '../../../Images/Common/Accounts/bee-maw-splash-vertical.jpg';
+import mockupHorizontalImage from '../../../Images/Common/Accounts/bee-maw-splash.jpeg';
 import mockupElo from '../../../Images/Common/Accounts/unranked.png';
 import { Link } from 'react-router-dom';
 import AddToCartIcon from '../../../Images/Common/Icons/AddToCartIcon';
@@ -12,7 +13,16 @@ const AccountCard = () => {
       <div className={style.card}>
         <div className={style.left}>
           <div className={style.imageContainer}>
-            <img className={style.image} src={mockupImage} alt='Nome Campeão' />
+            <img
+              className={`${style.image} ${style.isDesktop}`}
+              src={mockupVerticalImage}
+              alt='Nome Campeão'
+            />
+            <img
+              className={`${style.image} ${style.isMobile}`}
+              src={mockupHorizontalImage}
+              alt='Nome Campeão'
+            />
           </div>
         </div>
 

@@ -1,9 +1,9 @@
 .card {
     width: 408px;
+    grid-template-columns: 162fr 206fr;
     height: 289px;
     display: grid;
     padding: 12px;
-    grid-template-columns: 162fr 206fr;
     gap: 16px;
 
     border-radius: 10px;
@@ -42,12 +42,6 @@
     justify-content: space-between;
 }
 
-.rightTop {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: 62fr 128fr;
-}
-
 .infoContainer {
     display: flex;
     flex-direction: column;
@@ -76,6 +70,12 @@
     background-color: #261B3C;
 }
 
+
+.rightTop {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 62fr 128fr;
+}
 
 .rightMiddle {
     margin-top: 24px;
@@ -136,5 +136,64 @@
 
     .detailsButton:active {
         background-color: #754CCD;
+    }
+}
+
+.isMobile {
+    display: none;
+}
+
+@media (max-width: 880px) {
+    .isDesktop {
+        display: none;
+    }
+
+    .isMobile {
+        display: block;
+    }
+
+    .rightMiddle {
+        margin-top: 16px;
+    }
+
+    .rightBottom {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+    .addToCartButton p {
+        display: none;
+    }
+
+    .card {
+        width: 230px;
+        height: 370px;
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imageContainer {
+        height: 130px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+    }
+
+    .infoContent {
+        height: 30px;
+    }
+
+    .elo {
+        top: 28px;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .right {
+        height: 100%;
     }
 }
