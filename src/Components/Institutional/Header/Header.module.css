@@ -26,14 +26,13 @@ Pra desktop tem q colocar um icon de carrinho no canto da tela.
 
 .logoContainer {
     padding-left: 6px;
-    /* display: flex; */
+    display: flex;
     gap: 14px;
     align-items: center;
 }
 
 .logoContainer .text {
     margin-top: 4px;
-    background-repeat: no-repeat;
     width: 157px;
     height: 32px;
 }

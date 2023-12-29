@@ -15,15 +15,19 @@ const Header = ({ setIsCartOpen }) => {
           <div className={style.container + ' g-container'}>
             <Link to='/' className={style.logoContainer}>
               <img
+                height={'62'}
+                width={'52'}
                 src={logoIcon}
                 alt='Ícone LilSmurfs'
                 className={style.icon}
               />
-              <div
-                style={{ backgroundImage: `url(${logoText})` }}
+              <img
+                height={'32'}
+                width={'157'}
+                src={logoText}
                 alt='LilSmurfs'
                 className={style.text}
-              ></div>
+              />
             </Link>
 
             <nav className={style.middle}>
