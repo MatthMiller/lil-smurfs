@@ -1,0 +1,35 @@
+.section {
+    margin-bottom: 160px;
+}
+
+.title {
+    font-weight: 500;
+    font-style: italic;
+    color: #FFB743;
+    font-size: 2rem;
+    line-height: 2.1875rem;
+    margin-bottom: 10px;
+}
+
+.title span {
+    color: #F6F2FF;
+}
+
+.subtitle {
+    color: #A098B1;
+    font-size: 1.3125rem;
+    line-height: 1.4375rem;
+    max-width: 410px;
+    margin-bottom: 48px;
+}
+
+@media (max-width: 550px) {
+    .subtitle {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+    }
+}
+
+.cardsContainer {
+    overflow: auto;
+}

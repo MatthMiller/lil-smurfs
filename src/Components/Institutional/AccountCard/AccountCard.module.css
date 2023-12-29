@@ -1,0 +1,140 @@
+.card {
+    width: 408px;
+    height: 289px;
+    display: grid;
+    padding: 12px;
+    grid-template-columns: 162fr 206fr;
+    gap: 16px;
+
+    border-radius: 10px;
+    border: 1px solid #1F1630;
+    background: #150F21;
+    box-shadow: 0px 2px 4px 0px rgba(2, 0, 7, 0.20);
+}
+
+.imageContainer {
+    position: relative;
+    height: 100%;
+}
+
+.image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 0px rgba(2, 0, 7, 0.40) inset;
+}
+
+.imageContainer::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 0px 4px 0px rgba(2, 0, 7, 0.4) inset;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rightTop {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 62fr 128fr;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label {
+    font-weight: 600;
+    font-size: .875rem;
+    line-height: 1;
+    color: #E3DCF1;
+    letter-spacing: 0.28px;
+    text-align: center;
+}
+
+.infoContent {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    height: 32px;
+    width: 100%;
+    position: relative;
+    place-content: center;
+    border-radius: 5px;
+    color: #F6F2FF;
+    background-color: #261B3C;
+}
+
+
+.rightMiddle {
+    margin-top: 24px;
+}
+
+.elo {
+    position: absolute;
+    top: calc((30px));
+}
+
+.rightBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detailsButton,
+.addToCartButton {
+    font-family: 'Ubuntu';
+    transition: 150ms;
+    line-height: 1;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    border-radius: 7px;
+}
+
+.detailsButton {
+    padding: 9px;
+    border: 1px solid #754CCD;
+    color: #F6F2FF;
+}
+
+.addToCartButton {
+    padding: 8px;
+    gap: 8px;
+    font-weight: 500;
+    color: #1C1100;
+    background-color: #FFB743;
+    cursor: pointer;
+}
+
+@media (pointer: fine) {
+    .addToCartButton:hover {
+        background-color: #DF9724;
+    }
+
+    .detailsButton:hover {
+        background-color: #754CCD;
+    }
+}
+
+@media (pointer: coarse) {
+    .addToCartButton:active {
+        background-color: #DF9724;
+    }
+
+    .detailsButton:active {
+        background-color: #754CCD;
+    }
+}

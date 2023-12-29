@@ -2,6 +2,8 @@ import React from 'react';
 import style from './Header.module.css';
 import { Link, NavLink } from 'react-router-dom';
 import CartIcon from '../../../Images/Common/Icons/CartIcon';
+import logoIcon from '../../../Images/Common/logo-amarela-icon.png';
+import logoText from '../../../Images/Common/logo-amarela-texto.png';
 
 const Header = ({ setIsCartOpen }) => {
   const [menuMobile, setMenuMobile] = React.useState(false);
@@ -12,7 +14,12 @@ const Header = ({ setIsCartOpen }) => {
         <div className='g-header-wrapper'>
           <div className={style.container + ' g-container'}>
             <Link to='/' className={style.logoContainer}>
-              <h1>LOGO</h1>
+              <img
+                src={logoIcon}
+                alt='Ícone LilSmurfs'
+                className={style.icon}
+              />
+              <img src={logoText} alt='LilSmurfs' className={style.text} />
             </Link>
 
             <nav className={style.middle}>
@@ -74,7 +81,7 @@ const Header = ({ setIsCartOpen }) => {
                 </div>
               </div>
 
-              <Link className={style.userAreaButton} to={'/area-do-usuario'}>
+              <Link className={style.userAreaButton} to={'/login'}>
                 <svg
                   width='16'
                   height='16'
