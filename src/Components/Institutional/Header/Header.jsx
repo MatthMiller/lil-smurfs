@@ -19,13 +19,11 @@ const Header = ({ setIsCartOpen }) => {
                 alt='Ícone LilSmurfs'
                 className={style.icon}
               />
-              <img
-                height={'32'}
-                width={'157'}
-                src={logoText}
+              <div
+                style={{ backgroundImage: `url(${logoText})` }}
                 alt='LilSmurfs'
                 className={style.text}
-              />
+              ></div>
             </Link>
 
             <nav className={style.middle}>
