@@ -13,8 +13,8 @@ const Footer = () => {
                 <img
                   src={logo}
                   alt='Logo Lil Smurfs'
-                  height={'62'}
-                  width={'52'}
+                  height={'80'}
+                  width={'64'}
                 />
               </div>
 
