@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Footer.module.css';
-import logo from '../../../Images/Common/logo-lil-smurfs-h84.png';
+import logo from '../../../Images/Common/logo-amarela-icon.png';
 
 const Footer = () => {
   return (
@@ -10,7 +10,12 @@ const Footer = () => {
           <div className={'g-container'}>
             <div className={style.wrapper}>
               <div className={style.logoContainer}>
-                <img src={logo} alt='Logo Lil Smurfs' />
+                <img
+                  src={logo}
+                  alt='Logo Lil Smurfs'
+                  height={'62'}
+                  width={'52'}
+                />
               </div>
 
               <ul className={style.iconList}>
