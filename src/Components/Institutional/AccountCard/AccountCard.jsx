@@ -23,6 +23,24 @@ const AccountCard = () => {
               src={mockupHorizontalImage}
               alt='Nome Campeão'
             />
+
+            <div className={style.priceWrapper}>
+              <div className={style.price}>
+                <p className={style.priceParagraph}>
+                  R$ 18<span>,00</span>
+                </p>
+                <div className={style.priceShadow}></div>
+              </div>
+            </div>
+
+            <div className={style.skinsQuantityWrapper}>
+              <div className={style.skinsQuantityContainer}>
+                <p className={style.skinsQuantity}>
+                  +5<span>skins</span>
+                </p>
+                <div className={style.skinsQuantityShadow}></div>
+              </div>
+            </div>
           </div>
         </div>
 
